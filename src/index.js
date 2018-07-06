@@ -4,7 +4,10 @@ export const validate = (password) => {
    } else {
       const hasMayus = new RegExp('[A-Z]');
       const hasMinus = new RegExp('[a-z]');
-      return hasMayus.test(password) && hasMinus.test(password);
+      const hasNumber = new RegExp('[0-9]');
+      return hasMayus.test(password) && 
+            hasMinus.test(password) && 
+            hasNumber.test(password);
    }
      
 } 
